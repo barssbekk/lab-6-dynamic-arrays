@@ -4,7 +4,7 @@ using namespace std;
 
 void enterArrayData(double* arr, int size);
 void outputArrayData(const double* arr, int size);
-double sumArray(double* arr, int size);
+double sumArray(const double* arr, int size);
 
 int main() {
     const int SIZE{5};
@@ -18,6 +18,8 @@ int main() {
     return 0;
 }
 
+// enterArrayData() fills a dynamic array with userInput
+// arguments: double* arr, int size
 void enterArrayData(double *arr, int size) {
     double userInput{};
     cout << "Data entry for the array:\n";
@@ -29,6 +31,8 @@ void enterArrayData(double *arr, int size) {
     cout << "Data entry complete.\n";
 }
 
+// outputArrayData() outputs array elements
+// arguments: const double* arr, int size
 void outputArrayData(const double* arr, int size) {
     cout << "Outputting array elements: ";
     for (int i{0}; i < size; ++i)
@@ -36,7 +40,10 @@ void outputArrayData(const double* arr, int size) {
     cout << '\n';
 }
 
-double sumArray(double* arr, int size) {
+// sumArray() calculates the sum of all elements
+// arguments: const double* arr, int size
+// return: double sum of values in the array
+double sumArray(const double* arr, int size) {
     double sum{};
     for (int i{0}; i < size; ++i)
         sum += *(arr + i);
