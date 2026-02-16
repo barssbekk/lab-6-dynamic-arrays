@@ -3,8 +3,11 @@
 using namespace std;
 
 void enterArrayData(double* arr);
-int main() {
 
+int main() {
+    const int SIZE{5};
+    double* data{new double};
+    delete data;
     return 0;
 }
 
