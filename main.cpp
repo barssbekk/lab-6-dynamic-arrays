@@ -20,7 +20,7 @@ int main() {
 
 // enterArrayData() fills a dynamic array with userInput
 // arguments: double* arr, int size
-void enterArrayData(double *arr, int size) {
+void enterArrayData(double* arr, int size) {
     double userInput{};
     cout << "Data entry for the array:\n";
     for (int i{0}; i < size; ++i) {
