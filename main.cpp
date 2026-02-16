@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-void enterArrayData(double* arr, int size); //
+void enterArrayData(double* arr, int size);
 
 int main() {
     const int SIZE{5};
@@ -15,9 +15,14 @@ int main() {
 }
 
 void enterArrayData(double *arr, int size) {
-    cout << "Data entry for the array:";
+    double userInput{};
+    cout << "Data entry for the array:\n";
     for (int i{0}; i < size; ++i) {
-        
+        cout << "\t > Element #" << i << ": ";
+        cin >> userInput;
+        *(arr + i) = userInput;
     }
 
+    for (int i{0}; i < size; ++i)
+        cout << *(arr + i);
 }
