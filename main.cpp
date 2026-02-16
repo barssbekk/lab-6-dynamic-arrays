@@ -12,7 +12,7 @@ int main() {
     double* data{new double[SIZE]};
     enterArrayData(data, SIZE);
     outputArrayData(data, SIZE);
-    sumArray(data, SIZE);
+    cout << "Sum of values: " << sumArray(data, SIZE) << '\n';
 
     delete[] data;
     return 0;
@@ -40,6 +40,5 @@ double sumArray(double* arr, int size) {
     double sum{};
     for (int i{0}; i < size; ++i)
         sum += *(arr + i);
-    cout << "Sum of values: " << sum << '\n';
     return sum;
 }
